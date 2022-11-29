@@ -1,0 +1,66 @@
+<body>
+    <br>
+    <br>
+    <br>
+
+        
+
+<div class="container">
+
+
+
+    <h3> Customer Login</h3>
+
+    <form (ngSubmit) ="onSubmit()">
+
+
+    <div class="form-group">
+
+        <label>Email Id</label>
+
+        <input type="text" required #emailId= "ngModel"   emailId = "emailId" class="form-control" id="emailId"
+        [(ngModel)]="cus.emailId" name ="emailId">
+
+        <span *ngIf= "emailId.invalid && emailId.touched" style="color:red ;">please enter the valid input</span>
+
+    </div>
+
+   
+
+    <div class="form-group">
+
+        <label>Password</label>
+
+        <input type="text" minlength="3" required #password= "ngModel" password = "password" class="form-control" id="password"
+
+        [(ngModel)]="cus.password" name="password">
+
+        <span *ngIf= "password.invalid && password.touched" style="color:red ;">please enter the valid input</span>
+
+    </div>
+
+   
+
+    <button class ="btn btn-success"  type="submit">SignIn</button>
+
+       
+
+    </form>
+
+
+
+    <ul class = "navbar-nav">
+
+        <li class = "nav-item">
+
+            <a routerLink="" routerLinkActive="active" class="nav-link" (click)="register()">New User? SignUP</a>
+
+        </li>
+
+        </ul>
+
+       
+
+    </div>
+    
+    </body>

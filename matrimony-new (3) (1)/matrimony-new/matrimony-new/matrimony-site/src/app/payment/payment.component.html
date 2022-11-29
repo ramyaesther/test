@@ -1,0 +1,42 @@
+<body>
+    <form action="/action_page.php" #myForm="ngForm" (ngSubmit)="onPayment(myForm)">
+        <div class="container">
+          <h1>Payment</h1>
+        </div>
+        <br><br>
+          <label for="id"><b>Id</b></label>
+          <input type="text" ngModel placeholder="Enter id" #id="ngModel" name="id" id="id" required>
+          <br> <br>
+          <label for="name"><b>Name</b></label>
+          <input type="text" ngModel placeholder="Enter name" #lname="ngModel" name="name" id="name" required>
+          <br><br>
+          <label for="bankName"><b>Bank Name</b></label>
+          <input type="text" ngModel placeholder="Enter bank name" #bankName="ngModel" name="bankName" id="bankName" required>
+         <br><br>
+          <label for="accNo"><b>Account Number</b></label>
+          <input type="number" ngModel placeholder="Enter Phone Number" #accNo="ngModel" name="accNo" id="accNo" required>
+          <br><br>
+          <label for="ifscCode"><b>Ifsc Code</b></label>
+          <input type="string" ngModel placeholder="Enter ifscCode" #ifscCode="ngModel" name="ifscCode" id="ifscCode" required>
+          <br><br>
+          
+          
+      
+          <button type="submit" class="paymentbtn">PaymentDetails</button>
+          
+          
+      </form>
+
+    </body>  
+    <div>
+
+        <button (click)="pay(20)" class="btn btn-primary btn-block">Pay for 3 months</button>
+        <button (click)="pay(30)" class="btn btn-success btn-block">Pay for 6 months</button>
+        <button (click)="pay(50)" class="btn btn-info btn-block">Pay for 1 year</button>
+        
+        </div>  
+    
+<!-- <div class="col-md-4">
+
+    <button (click)="pay(2000)" class="btn btn-primary btn-block">Pay </button>
+  </div> -->

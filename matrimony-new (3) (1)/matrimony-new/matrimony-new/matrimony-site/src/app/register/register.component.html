@@ -1,0 +1,190 @@
+
+<body>
+  <form action="/action_page.php" #myForm="ngForm" (ngSubmit)="onRegister(myForm)">
+      <div class="container">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+           <div>
+            <p>Click on the "Choose File" button to upload a photo:</p>
+  
+           
+  
+  <form action="/action_page.php">
+    <input type="file" id="myFile" name="filename">
+    <input type="submit">
+  </form>
+           </div>
+        <label for="firstName"><b>First Name</b></label>
+        <input type="text" ngModel placeholder="Enter Firstname" #firstName="ngModel" name="firstName" id="firstName" required>
+        <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+        class="alert">
+      <div *ngIf="firstName.errors?.['required']">
+  
+        Name is required.
+  </div>
+     <div *ngIf="firstName.errors?.['minlength']">
+  Name must be at least 4 characters long.
+  
+      </div>
+  
+      <div *ngIf="firstName.errors?.['forbiddenName']">
+  
+        Name cannot be Bob.
+  
+      </div>
+  
+      </div>
+        <label for="lastName"><b>Last Name</b></label>
+        <input type="text" ngModel placeholder="Enter LastName" #lastName="ngModel" name="lastName" id="lastName" required>
+        <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+        class="alert">
+      <div *ngIf="lastName.errors?.['required']">
+  
+        Name is required.
+  </div>
+     <div *ngIf="lastName.errors?.['minlength']">
+  Name must be at least 4 characters long.
+  
+      </div>
+  
+      <div *ngIf="lastName.errors?.['forbiddenName']">
+  
+        Name cannot be Bob.
+  
+      </div>
+  
+      </div>
+    
+        
+    
+        <label for="emailId"><b>Email</b></label>
+        <input type="text" ngModel placeholder="Enter Email" #emailId="ngModel" name="emailId" id="emailId" required>
+        <div *ngIf=" emailId.errors?.['required']">
+  
+          email is required.
+    
+        </div>
+    
+        <label for="phoneNo"><b>Phone Number</b></label><br><br>
+        <input type="tel" ngModel placeholder="Enter Phone Number" #phoneNo="ngModel" name="phoneNo" id="phoneNo" required>
+        
+        <br><br>
+        <label for="caste"><b>Caste</b></label>
+        <input type="text" ngModel placeholder="Enter caste" #caste="ngModel" name="caste" id="caste" required>
+        <div *ngIf=" caste.errors?.['required']">
+  
+          Caste is required.
+    
+        </div>
+        <label for="religion"><b>Religion</b></label>
+        <input type="text" ngModel placeholder="Enter Religion" #religion="ngModel" name="religion" id="religion" required>
+        <div *ngIf=" religion.errors?.['required']">
+  
+          Religion is required.
+    
+        </div>
+        <label for="education"><b>Education</b></label>
+        <input type="text" ngModel placeholder="Enter Education" #education="ngModel" name="education" id="education" required>
+        <div *ngIf=" education.errors?.['required']">
+  
+          education is required.
+    
+        </div>
+        <label for="language"><b>Language</b></label>
+        <input type="text" ngModel placeholder="Enter Language" #language="ngModel" name="language" id="language" required>
+        <div *ngIf=" language.errors?.['required']">
+  
+          Language is required.
+    
+        </div>
+        <label for="location"><b>Location</b></label>
+        <input type="text" ngModel placeholder="Enter location" #location="ngModel" name="location" id="location" required>
+        <div *ngIf=" location.errors?.['required']">
+  
+          Location is required.
+    
+        </div>
+        <br><br>
+        <label for="gender"><b>Gender</b></label>
+        <input type="text" ngModel placeholder="Enter gender male or female" #gender="ngModel" name="gender" id="gender" required>
+        <div *ngIf=" gender.errors?.['required']">
+  
+          Gender is required.
+    
+        </div>
+          <br><br>
+          <label for="height"><b>Height</b></label>
+          <br><br>
+        <input type="number" ngModel placeholder="Enter Height" #height="ngModel" name="height" id="height" required>
+        <div *ngIf=" height.errors?.['required']">
+  
+          Height is required.
+    
+        </div>
+        <br><br>
+        <label for="weight"><b>Weight</b></label>
+        <br><br>
+        <input type="number" ngModel placeholder="Enter weight" #weight="ngModel" name="weight" id="weight" required>
+        <div *ngIf=" weight.errors?.['required']">
+  
+          Weight is required.
+    
+        </div>
+        
+        <br>
+        <br>
+        <label for="profession"><b>Profession</b></label>
+        <input type="text" ngModel placeholder="Enter Profession" #profession="ngModel" name="profession" id="profession" required>
+        <div *ngIf=" profession.errors?.['required']">
+  
+          Profession is required.
+    
+        </div>
+        
+        <label for="country"><b>Country</b></label>
+        <input type="text" ngModel placeholder="Enter country" #country="ngModel" name="country" id="country" required>
+        <div *ngIf=" country.errors?.['required']">
+  
+          Country is required.
+    
+        </div>
+        <br><br>
+        <label for="plans"><b>plans </b></label>
+        <input type="text" ngModel placeholder="Enter prefered plan 6months or 1 year" #plans="ngModel" name="plans" id="plans" required>
+        <div *ngIf=" plans.errors?.['required']">
+  
+          Plans is required.
+    
+        </div>
+  
+  <br><br>
+  
+  <label for="maritalStatus"><b>Marital Status  </b></label>
+        <input type="text" ngModel placeholder="Enter marital Status like Single Divorce Widowed" #maritalStatus="ngModel" name="maritalStatus" id="maritalStatus" required>
+        <div *ngIf=" maritalStatus.errors?.['required']">
+  
+          maritalStatus is required.
+    
+        </div>
+  <br><br>
+  
+    
+    
+      
+    
+        
+        <label for="password"><b>Password</b></label>
+        <input type="password" ngModel placeholder="Enter a new Password" #password="ngModel" name="password" id="password" required>
+        <hr>
+    
+        <button type="submit" class="registerbtn">Register</button>
+      </div>
+      
+      <div class="container signin">
+        <!--<p>Already have an account?   <a href="#">Sign In</a></p>-->
+        <p>Already have an account?   <button (click)="signIn()">Sign In</button></p>
+      </div>
+    </form>
+  </body>  
+  

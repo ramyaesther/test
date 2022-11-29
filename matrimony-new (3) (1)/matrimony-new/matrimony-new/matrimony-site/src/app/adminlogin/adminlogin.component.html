@@ -1,0 +1,86 @@
+<!-- <body>
+    <br>
+    <br>
+    <br>
+
+        
+
+<div class="container">
+
+
+
+    <h3> Admin Login</h3>
+
+    <form (ngSubmit) ="onSubmit()">
+
+
+    <div class="form-group">
+
+        <label>UserName</label>
+
+        <input type="text" required #userName= "ngModel"   userName = "userName" class="form-control" id="userName"
+        [(ngModel)]="adm.userName" name ="userName">
+
+        <span *ngIf= "userName.invalid && userName.touched" style="color:red ;">please enter the valid input</span>
+
+    </div>
+
+   
+
+    <div class="form-group">
+
+        <label>Password</label>
+
+        <input type="text" minlength="5" required #password= "ngModel" password = "password" class="form-control" id="password"
+
+        [(ngModel)]="adm.password" name="password">
+
+        <span *ngIf= "password.invalid && password.touched" style="color:red ;">please enter the valid input</span>
+
+    </div>
+
+   
+
+    <button class ="btn btn-success"  type="submit">SignIn</button>
+
+       
+
+    </form>
+
+
+
+   
+
+       
+
+    </div>
+    
+    </body> -->
+
+    
+
+
+<body>
+    <form action="/action_page.php" #myForm="ngForm" (ngSubmit)="onSignUp(myForm)">
+    
+        <div class="container">
+          <div class="topic-text"><h3>LogIn</h3></div>
+          <br><br>
+          <label><b>ID</b></label>
+          <input type="number" ngModel placeholder="Enter id" #id="ngModel" name="id" id="id" required>
+            <br><br>
+          <label><b>Username</b></label>
+          <input type="text" ngModel placeholder="Enter email" #userName="ngModel" name="userName" id="userName" required>
+            <br><br>
+          <label><b>Password</b></label>
+          <input type="password" ngModel placeholder="Enter Password" #password="ngModel" name="password" id="passwords" required>
+          <div class="button">
+          <button type="submit">Login</button>
+          </div>
+        </div>
+       
+        
+      </form>
+      </body>
+      
+     

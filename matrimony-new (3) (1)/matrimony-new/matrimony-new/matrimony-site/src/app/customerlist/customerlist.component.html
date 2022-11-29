@@ -1,0 +1,100 @@
+
+<h1>customer Information</h1>
+<div style="margin:2rem;">
+    <table border="1" style="background-color: #790d0d;color:rgb(206, 206, 210)">
+      <tr>
+
+        <th>Photo</th>
+        <th>id</th>
+        
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Caste</th>
+        <th>Religion</th>
+        <th>Education</th>
+        <th>Language</th>
+        <th>Gender</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Profession</th>
+         <th>Country</th>
+        <th>Plan</th>
+        <th>Marital Status</th>
+        
+        
+      </tr>
+  
+      <tr *ngFor="let Customer of customers">
+
+        <td><img src="image.jpg" alt=""></td>
+        <td>{{Customer.id}}</td>
+        <td>{{Customer.firstName}}</td>
+
+
+
+<td>{{Customer.lastName}}</td>
+
+
+
+<td>{{Customer.emailId}}</td>
+
+
+
+<td>{{Customer.phoneNo}}</td>
+
+
+
+<td>{{Customer.caste}}</td>
+
+
+
+<td>{{Customer.religion}}</td>
+
+
+
+<td>{{Customer.education}}</td>
+
+
+
+<td>{{Customer.language}}</td>
+
+
+
+<td>{{Customer.location}}</td>
+
+
+
+<td>{{Customer.gender}}</td>
+
+
+
+<td>{{Customer.height}}</td>
+
+
+
+<td>{{Customer.weight}}</td>
+
+
+
+<td>{{Customer.country}}</td>
+
+
+
+<td>{{Customer.plans}}</td>
+
+
+
+<td>{{Customer.maritalStatus}}</td>
+
+
+
+
+        </tr>
+        
+    </table>
+  </div>
+  <td>
+    
+</td>

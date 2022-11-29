@@ -1,0 +1,162 @@
+<div style="margin:2rem;">
+
+    <table border="1" style="background-color: #790d0d;color:rgb(206, 206, 210)">
+
+      <tr>
+
+       
+
+        <!-- <th (click)="sort('id')"> Id&nbsp;<i class="fa-fa-sort"></i></th>
+
+        <th (click)="sort('firstName')">FirstName&nbsp;<i class="fa-fa-sort"></i></th> -->
+
+       
+
+        <th>customer Photo</th>
+
+        <th>customer id</th>
+
+       
+
+        <th>FirstName</th>
+
+        <th>LastName</th>
+
+        <th>Email</th>
+
+        <th>Phone</th>
+
+        <th>Caste</th>
+
+        <th>Religion</th>
+
+        <th>Education</th>
+
+        <th>Language</th>
+
+        <th>Gender</th>
+
+        <th>Height</th>
+
+        <th>Weight</th>
+
+        <th>Profession</th>
+
+         <th>Country</th>
+
+        <th>Plan</th>
+
+        <th>Marital Status</th>
+
+       
+
+       
+
+      </tr>
+      <tr *ngFor="let customer of customers">
+
+        <td><img src="image.jpg" alt=""></td>
+
+        <td>{{customer.id}}</td>
+
+        <td>{{customer.firstName}}</td>
+
+
+
+
+
+<td>{{customer.lastName}}</td>
+
+
+
+
+
+<td>{{customer.emailId}}</td>
+
+
+
+
+
+<td>{{customer.phoneNo}}</td>
+
+
+
+
+
+<td>{{customer.caste}}</td>
+<td>{{customer.education}}</td>
+
+
+
+
+
+<td>{{customer.language}}</td>
+
+
+
+
+
+<td>{{customer.location}}</td>
+
+
+
+
+
+<td>{{customer.gender}}</td>
+
+
+
+
+
+<td>{{customer.height}}</td>
+
+
+
+
+
+<td>{{customer.weight}}</td>
+
+
+
+
+
+<td>{{customer.country}}</td>
+
+
+
+
+
+<td>{{customer.plans}}</td>
+
+
+
+
+
+<td>{{customer.maritalStatus}}</td>
+
+
+
+
+
+
+<button (click) = "updateuser(customer.id)" class = "btn btn-primary"> Update</button>
+
+<button (click) = "deleteCustomer(customer.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+
+<!-- <button (click) = "customerlist(Customer.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button> -->
+
+        </tr>
+
+        <!-- <tr ><pagination-controls  (pageChange)="p = $event"></pagination-controls></tr> -->
+
+    </table>
+
+    <!-- <tr ><pagination-controls  (pageChange)="p = $event"></pagination-controls></tr> -->
+
+  </div>
+
+  <td>
+
+   
+
+</td>
